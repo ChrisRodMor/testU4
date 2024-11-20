@@ -1,8 +1,10 @@
 Options +FollowSymLinks -MultiViews -Indexes
 RewriteEngine on
-RewriteBase  /ExamenU4/
+RewriteBase  /
 
 #páginas
+RewriteRule ^$ index.php [L]
+
 
 #auth
 RewriteRule ^login?$ index.php
