@@ -1,0 +1,50 @@
+Options +FollowSymLinks -MultiViews -Indexes
+RewriteEngine on
+RewriteBase  /ExamenU4/
+
+#páginas
+
+#auth
+RewriteRule ^login?$ index.php
+RewriteRule ^home/?$ views/auth/home.php
+RewriteRule ^profile/?$ views/auth/profile.php
+RewriteRule ^register/?$ views/auth/register.php
+
+#products
+RewriteRule ^products/?$ views/products/index.php
+RewriteRule ^products/([^/]+)/?$ views/products/details.php
+# RewriteRule ^detailsProduct/?$ views/products/details.php
+
+
+#users
+RewriteRule ^users/?$ views/users/index.php
+# RewriteRule ^users/([^/]+)/?$ views/users/details.php
+RewriteRule ^detailsUser/?$ views/users/details.php
+
+#clients
+RewriteRule ^clients/?$ views/clients/index.php
+# RewriteRule ^clients/([^/]+)/?$ views/clients/details.php
+RewriteRule ^detailsClient/?$ views/clients/details.php
+
+#orders
+RewriteRule ^orders/?$ views/orders/index.php
+# RewriteRule ^orders/([^/]+)/?$ views/orders/details.php
+RewriteRule ^detailsOrder/?$ views/orders/details.php
+
+
+
+
+#controladores
+RewriteRule ^adress?$ app/AdressController.php
+RewriteRule ^auth?$ app/AuthController.php
+RewriteRule ^brands?$ app/BrandController.php
+RewriteRule ^categories?$ app/CategoryController.php
+RewriteRule ^api-clients?$ app/ClientController.php
+RewriteRule ^levels?$ app/LevelController.php
+RewriteRule ^api-orders?$ app/OrderController.php
+RewriteRule ^presentations?$ app/PresentationController.php
+RewriteRule ^api-products?$ app/ProductController.php
+RewriteRule ^tags?$ app/TagController.php
+RewriteRule ^api-users?$ app/UserController.php
+
+RewriteRule ^config?$ app/config.php
