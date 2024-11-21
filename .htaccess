@@ -5,6 +5,8 @@ RewriteBase  /
 #páginas
 RewriteRule ^$ index.php [L]
 
+#prueba
+RewriteRule ^test?$ views/chris.php
 
 #auth
 RewriteRule ^login?$ index.php
